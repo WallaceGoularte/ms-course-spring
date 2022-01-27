@@ -21,13 +21,17 @@ public class WorkerResource {
 
     @RequestMapping(method = RequestMethod.GET)
     public ResponseEntity<List<Worker>> findAll(){
-
         return ResponseEntity.ok(workerService.findAll());
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public ResponseEntity<Optional<Worker>> findById(@PathVariable final Long id){
         return ResponseEntity.ok(workerService.findById(id));
+    }
+
+    @RequestMapping(method = RequestMethod.POST)
+    public void save(final Worker worker){
+        workerService.save(worker);
     }
 
 }

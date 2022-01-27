@@ -22,5 +22,15 @@ public class WorkerService {
         return Optional.of(workerRepository.findById(id).orElseThrow());
     }
 
+    public void save(final Worker worker) {
+        this.workerRepository.save(worker);
+    }
 
+    public void saveAll(final List<Worker> workers) {
+        this.workerRepository.saveAll(workers);
+    }
+
+    public void delete(final Worker worker) {
+        this.workerRepository.delete(worker);
+    }
 }
