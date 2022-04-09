@@ -25,7 +25,7 @@ public class MsWorkerApplication implements CommandLineRunner {
 
         final Worker worker2 = new Worker(null, "Joana", 600d);
 
-        final Worker worker3 = new Worker(null, "Beatris", 800d);
+        final Worker worker3 = new Worker(null, "Rosilene", 800d);
 
         this.workerRepository.saveAll(Arrays.asList(worker1, worker2, worker3));
     }
